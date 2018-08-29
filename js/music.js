@@ -1,6 +1,6 @@
-/* document.getElementById("getText").addEventListener("click", getData); */
 const albumCovers = document.getElementById("cover");
 
+//Function that gets the data from apple API
 function getData() {
   fetch("https://itunes.apple.com/us/rss/topalbums/limit=100/json")
     .then(response => response.json())
@@ -22,18 +22,3 @@ function getData() {
     .catch(error => console.log(error));
 }
 
-function showInfo(record) {
-  /* $("#ModalInfo").modal("toggle"); */
-  console.log('hello');
-
-  /* $("#modalInfo").html(`
-                    <div>
-                        Planet Name:  ${planet.name} 
-                        <br>Diameter:  ${planet.diameter}
-                        <br>Gravity: ${planet.gravity}
-                        <br>Rotation Period:  ${planet.rotation_period}
-                        <br>Orbital Period:  ${planet.orbital_period}
-                        <br>Terrain:  ${planet.terrain}
-                        <br>Surface water: ${planet.surface_water}
-                        </div>`); */
-}
